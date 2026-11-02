@@ -1,7 +1,20 @@
-/* Custom styles.
-   PaperMod bundles every file in assets/css/extended/, so anything you add
-   here is appended to the theme's CSS. */
-
 .md-content img.responsive-img {
   border-radius: 6px;
+}
+
+.home-info a {
+  color: #0f766e;
+}
+
+:root {
+  --theme: #fff9f0;   /* page background */
+  --entry: #fffcf7;   /* cards and post boxes */
+}
+
+body.list {
+  background: var(--theme);
+}
+
+.dark {
+  --theme: #1d1e20;
 }

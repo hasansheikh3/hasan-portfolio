@@ -34,18 +34,28 @@ mainSections = ["posts"]
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
-  ShowRssButtonInSectionTermList = true
+  ShowRssButtonInSectionTermList = false
   ShowAllPagesInArchive = true
   ShowPageNums = true
   ShowToc = true
   images = ["images/og-cover.png"]
 
 [params.homeInfoParams]
-  Title = "Hey, I'm Hasan 👋"
+  Title = "Hello there"
   Content = """
-I write about software, systems, and the things I build.
+I'm a network engineer who configures, codes, and automates networking
+systems for a living. I've spent 4 years at [**7GFuse**](https://www.7gfuse.com),
+building multi-WAN routing, VPN bonding, Deep Packet Inspection, and RADIUS based
+solutions on OpenWrt and embedded Linux. 
 
-Start with [the latest posts](/posts/), or read [about me](/about/).
+
+You can connect with me at
+
+- **E-mail:** [hasan@hasanshaikh.com](mailto:hasan@hasanshaikh.com)
+- **LinkedIn:** [Muhammad Hasan Shaikh](https://www.linkedin.com/in/muhammad-hasan-shaikh-49727414b/)
+- **GitHub:** [hasansheikh3](https://www.github.com/hasansheikh3)
+
+
 """
 
 [params.cover]
@@ -59,7 +69,7 @@ Start with [the latest posts](/posts/), or read [about me](/about/).
 # Fill these in and remove the comments.
 # [[params.socialIcons]]
 #   name = "github"
-#   url = "https://github.com/your-handle"
+#   url = "https://github.com/hasansheikh3"
 #
 # [[params.socialIcons]]
 #   name = "linkedin"
