@@ -1,0 +1,16 @@
+[build]
+  # The explicit submodule update keeps theme installs working even if the
+  # repository is cloned without --recurse-submodules.
+  command = "git submodule update --init --recursive && hugo --gc --minify"
+  publish = "public"
+
+[build.environment]
+  HUGO_VERSION = "0.169.0"
+  HUGO_ENV = "production"
+
+# Use the deploy URL for previews so absolute links and images resolve.
+[context.deploy-preview]
+  command = "git submodule update --init --recursive && hugo --gc --minify -b $DEPLOY_PRIME_URL"
+
+[context.branch-deploy]
+  command = "git submodule update --init --recursive && hugo --gc --minify -b $DEPLOY_PRIME_URL"

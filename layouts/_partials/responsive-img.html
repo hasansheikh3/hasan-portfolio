@@ -1,0 +1,36 @@
+{{- /*
+  Emits a responsive <img> for a raster image stored in the current page bundle.
+
+  Usage from a template:
+    {{ partial "responsive-img.html" (dict "page" . "src" "cover.jpg" "alt" "…") }}
+
+  The largest generated variant is capped at the image's intrinsic width, so
+  small source images are never upscaled.
+*/ -}}
+{{- $page := .page -}}
+{{- $src := .src -}}
+{{- $alt := .alt | default "" -}}
+
+{{- with $page.Resources.GetMatch $src -}}
+  {{- $img := . -}}
+  {{- $widths := slice 480 768 1200 -}}
+  {{- $srcset := slice -}}
+
+  {{- range $widths -}}
+    {{- if le . $img.Width -}}
+      {{- $variant := $img.Resize (printf "%dx q82 webp" .) -}}
+      {{- $srcset = $srcset | append (printf "%s %dw" $variant.RelPermalink $variant.Width) -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- $fallbackWidth := cond (lt $img.Width 768) $img.Width 768 -}}
+  {{- $fallback := $img.Resize (printf "%dx q82 webp" $fallbackWidth) -}}
+  <img
+    src="{{ $fallback.RelPermalink }}"
+    {{- with $srcset }} srcset="{{ delimit . ", " }}" sizes="(max-width: 768px) 100vw, 768px"{{ end }}
+    width="{{ $fallback.Width }}" height="{{ $fallback.Height }}"
+    alt="{{ $alt }}" loading="lazy" decoding="async" class="responsive-img">
+{{- else -}}
+  {{- warnf "responsive-img: %q not found in page resources of %s" $src $page.RelPermalink -}}
+  <img src="{{ $src | relURL }}" alt="{{ $alt }}" loading="lazy" decoding="async">
+{{- end -}}

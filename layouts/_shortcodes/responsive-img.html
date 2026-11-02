@@ -1,0 +1,4 @@
+{{- /* Shortcode wrapper around the responsive-img partial. */ -}}
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" | default "" -}}
+{{- partial "responsive-img.html" (dict "page" .Page "src" $src "alt" $alt) -}}

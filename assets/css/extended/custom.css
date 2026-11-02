@@ -1,0 +1,7 @@
+/* Custom styles.
+   PaperMod bundles every file in assets/css/extended/, so anything you add
+   here is appended to the theme's CSS. */
+
+.md-content img.responsive-img {
+  border-radius: 6px;
+}

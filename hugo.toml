@@ -1,0 +1,98 @@
+# ---------------------------------------------------------------------------
+# Site
+# ---------------------------------------------------------------------------
+baseURL = "https://example.com/"
+title = "Hasan Shaikh"
+copyright = "© 2026 Hasan Shaikh"
+theme = "PaperMod"
+
+enableRobotsTXT = true
+enableEmoji = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+mainSections = ["posts"]
+
+[pagination]
+  pagerSize = 10
+
+# JSON is required for PaperMod's client-side search.
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+# ---------------------------------------------------------------------------
+# Theme
+# ---------------------------------------------------------------------------
+[params]
+  env = "production"
+  description = "Hasan Shaikh — notes on software, systems, and side projects."
+  author = "Hasan Shaikh"
+  defaultTheme = "auto"
+
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowRssButtonInSectionTermList = true
+  ShowAllPagesInArchive = true
+  ShowPageNums = true
+  ShowToc = true
+  images = ["images/og-cover.png"]
+
+[params.homeInfoParams]
+  Title = "Hey, I'm Hasan 👋"
+  Content = """
+I write about software, systems, and the things I build.
+
+Start with [the latest posts](/posts/), or read [about me](/about/).
+"""
+
+[params.cover]
+  # In production, PaperMod emits a responsive srcset for page-bundle covers.
+  responsiveImages = true
+
+[params.assets]
+  theme_color = "#0ea5e9"
+  msapplication_TileColor = "#0ea5e9"
+
+# Fill these in and remove the comments.
+# [[params.socialIcons]]
+#   name = "github"
+#   url = "https://github.com/your-handle"
+#
+# [[params.socialIcons]]
+#   name = "linkedin"
+#   url = "https://www.linkedin.com/in/your-handle/"
+#
+# [[params.socialIcons]]
+#   name = "x"
+#   url = "https://x.com/your-handle"
+
+# ---------------------------------------------------------------------------
+# Menus
+# ---------------------------------------------------------------------------
+[[menu.main]]
+  name = "Posts"
+  url = "posts/"
+  weight = 1
+
+[[menu.main]]
+  name = "Projects"
+  url = "projects/"
+  weight = 2
+
+[[menu.main]]
+  name = "About"
+  url = "about/"
+  weight = 3
+
+[[menu.main]]
+  name = "Archive"
+  url = "archives/"
+  weight = 4
+
+[[menu.main]]
+  name = "Search"
+  url = "search/"
+  weight = 5
