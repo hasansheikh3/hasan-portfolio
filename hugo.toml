@@ -48,6 +48,20 @@ systems for a living. I've spent 4 years at [**7GFuse**](https://www.7gfuse.com)
 building multi-WAN routing, VPN bonding, Deep Packet Inspection, and RADIUS based
 solutions on OpenWrt and embedded Linux. 
 
+A few things that I have worked with, or learned, are
+
+- **Routing Protocols :** OSPF, BGP, IS-IS, and EIGRP
+- **Switching Technologies :** VLANs, STP, Bonding (LACP/Etherchannel), VXLAN, MLAG (for Arista), and vPC (for Cisco)
+- **VPN Technologies :** OpenVPN, WireGuard, IPsec, and GRE
+- **Identity Management :** RADIUS, TACACS+, Cisco ISE, EntraID
+- **Programming Languages :** C++, Python, Bash scripting
+- **Operating Systems :** Linux (Debian, Ubuntu, OpenWrt), Windows
+- **Troubleshooting Tools :** Wireshark, tcpdump, iperf, ping, and traceroute
+- **Monitoring and Observability :** SNMP, Netflow
+- **Automation and Configuration Management :** Ansible, Git, Terraform, and CI/CD pipelines
+
+
+
 
 You can connect with me at
 
